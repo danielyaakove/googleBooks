@@ -7,18 +7,20 @@ import { FavoritesComponent } from "./Components/favorites/favorites.component";
 import { BookDetailsComponent } from "./Components/book-details/book-details.component";
 import { AuthGuard } from "./sherd/auth.guard";
 
-//, canActivate: [AuthGuard]
+///, canActivatess: [AuthGuard]
 const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "login", component: LoginComponent },
   {
     path: "search",
-    component: SearchComponent
+    component: SearchComponent,
+    canActivate: [AuthGuard]
   },
-  { path: "favorite", component: FavoritesComponent },
+  { path: "favorite", component: FavoritesComponent, canActivate: [AuthGuard] },
   {
     path: "details",
-    component: BookDetailsComponent
+    component: BookDetailsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "",
