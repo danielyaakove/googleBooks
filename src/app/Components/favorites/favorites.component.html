@@ -1,3 +1,5 @@
-<p>
-  favorites works!
-</p>
+<div class="row">
+  <div *ngFor="let book of favorites" class="col-lg-2 col-md-3 col-sm-6">
+    <app-book [book]="book" [ShowFavoritesIcon]="false"></app-book>
+  </div>
+</div>

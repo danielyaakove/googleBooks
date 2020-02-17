@@ -20,7 +20,6 @@ export class NavComponent implements OnInit {
   ngOnInit() {}
 
   login() {
-    debugger;
     if (this.authService.login(this.model)) {
       this.alertify.success("Logged in successfully");
       this.router.navigate(["/search"]);

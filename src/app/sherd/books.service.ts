@@ -15,6 +15,7 @@ export class BooksService {
   readonly books = this._books.asObservable();
   public currentBook: Book;
   private queryParm = "q";
+  public favorites: Book[] = [];
   constructor(private httpClient: HttpClient) {}
 
   search(query: string) {
@@ -43,5 +44,16 @@ export class BooksService {
 
   setCurrentBook(book: Book) {
     this.currentBook = book;
+  }
+
+  addToFavorites(book: Book) {
+    this.favorites.push(book);
+  }
+  removeFromFavorites(book: Book) {
+    var index = this.favorites.indexOf(book);
+
+    if (index !== null) {
+      this.favorites.splice(index, 1);
+    }
   }
 }

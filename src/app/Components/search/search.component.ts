@@ -20,4 +20,6 @@ export class SearchComponent implements OnInit {
     });
     this.booksService.search(this.query);
   }
+
+  
 }

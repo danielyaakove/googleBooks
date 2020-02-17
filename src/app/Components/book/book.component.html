@@ -5,8 +5,8 @@
       <li class="list-inline-item"><button class="btn btn-primary" (click)="bookDetails(book)"><i
             class="fa fa-info-circle"></i></button></li>
 
-      <li class="list-inline-item"><button class="btn btn-primary" (click)="addToFavorite(book)"><i
-            class="fa fa-heart"></i></button></li>
+      <li *ngIf="ShowFavoritesIcon" class="list-inline-item"><button class="btn btn-primary"
+          (click)="addToFavorite(book)"><i class="fa fa-heart"></i></button></li>
     </ul>
   </div>
   <div class="card-body p-1">
