@@ -6,7 +6,7 @@ import { BooksService } from "src/app/sherd/books.service";
 @Component({
   selector: "app-book-details",
   templateUrl: "./book-details.component.html",
-  styleUrls: ["./book-details.component.css"]
+  styleUrls: ["./book-details.component.scss"]
 })
 export class BookDetailsComponent implements OnInit {
   book: Book;
@@ -16,4 +16,5 @@ export class BookDetailsComponent implements OnInit {
   ngOnInit() {
     this.book = this.booksService.currentBook;
   }
+  
 }

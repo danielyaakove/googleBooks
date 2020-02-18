@@ -19,7 +19,10 @@
       <a class="dropdown-toggle text-light" dropdownToggle>
         Welcome {{authService.currentUser?.userName | titlecase}}
       </a>
-
+      <div class="dropdown-menu mt-3" *dropdownMenu>
+        <a class="dropdown-item" (click)="logout()">
+          <i class="fa fa-sign-out"></i> Logout</a>
+      </div>
     </div>
 
     <form *ngIf="!loggedIn()" #loginForm="ngForm" class="form-inline my-2 my-lg-0"

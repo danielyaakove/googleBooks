@@ -24,7 +24,18 @@ export class AuthService {
   }
 
   loggedIn() {
-    const user = localStorage.getItem("user");
+    if (!this.isLoggedIn && localStorage.getItem('user') != null){
+      //handle refresh;
+      const user = localStorage.getItem('user');
+      var parseUser = JSON.parse(user);
+      this.currentUser = new User(parseUser.userName);
+      this.isLoggedIn = true;
+
+    }
     return this.isLoggedIn;
+  }
+  logout(){
+    localStorage.removeItem('user');
+      
   }
 }
