@@ -10,6 +10,9 @@
       margin-right: 5px;
      a{
       cursor: pointer !important;
+      &:hover{
+        color: #007bff!important;
+      }
      }
     }
   }
