@@ -15,6 +15,8 @@ import { SearchComponent } from "./Components/search/search.component";
 import { FavoritesComponent } from "./Components/favorites/favorites.component";
 import { BookDetailsComponent } from "./Components/book-details/book-details.component";
 import { BookComponent } from "./Components/book/book.component";
+import * as _ from 'underscore';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { BookComponent } from "./Components/book/book.component";
     FavoritesComponent,
     BookDetailsComponent,
     BookComponent
+    
   ],
   imports: [
     BrowserModule,

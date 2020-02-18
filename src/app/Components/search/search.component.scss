@@ -4,4 +4,13 @@
       margin-left: 5px;
     }
   }
+  .pagination{
+    margin: auto;
+    li{
+      margin-right: 5px;
+     a{
+      cursor: pointer !important;
+     }
+    }
+  }
 }
